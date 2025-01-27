@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/logo/businessLogo.png" type="image/png">
+    <link rel="stylesheet" href="./page2.css">
+    <title>Splashpoint Reservations</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="head">
+            <img class="head-logo" src="../assets/images/logo/businessLogo.png" alt="">
+            <img class="head-name" src="../assets/images/logo/busineessName.png" alt="">
+            <img class="head-bg" src="../assets/images/Page 2/header.png" alt="">
+        </div>
+    </header>
+	
+	<hr>
+
+    <div class="reservation">
+        <h1>Reservations</h1>
+        <form class="entries">
+            <div class="r-name">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Name">
+            </div>
+
+            <div class="r-contact">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" placeholder="Number">
+            </div>
+			
+			<div class="r-people">
+                <label for="no"># No. of People:</label>
+                <input type="tel" id="no" placeholder="Number">
+            </div>
+
+            <div class="r-guest">
+                <label for="guest">Guest:</label>
+                <select id="guest">
+                    <option value="">Select type</option>
+                    <option value="1">Student</option>
+                    <option value="2">Adult</option>
+                    <option value="3">Children</option>
+                </select>
+            </div>
+
+            <div class="r-date">
+                <label for="dateTime">Date and Time:</label>
+                <input type="datetime-local" id="dateTime">
+            </div>
+
+            <button class="submit-btn" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
