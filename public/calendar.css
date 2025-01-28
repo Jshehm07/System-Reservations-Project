@@ -1,0 +1,131 @@
+.calendar {
+  background-color: #F2D6A1;
+  height: 680px;
+  width: 1030px;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#title {
+  color: #84572F;
+  font-family: "Lalezar";
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0.5
+}
+.days {
+  height: 6rem;
+  width: 5rem;
+  background-color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 15px;
+  color: #84572F;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  transition: background-color 0.3s ease;
+}
+.days:hover {
+  background-color: #B1C9EF;
+  transition: background-color 0.3s ease;
+}
+.days:active.days:focus {
+  background-color: #238ED6;
+  transition: background-color 0.1s ease;
+}
+.calendar-line {
+  background-color: #84572F;
+  height: 3%;
+  margin: 1rem 0;
+  border: none;
+}
+#btn-ln-one{
+  height: 6rem;
+  width: 12rem;
+  background-color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 20px;
+  color: #84572F;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  transition: background-color 0.3s ease;
+}
+#btn-ln-one:hover {
+  background-color: #B1C9EF;
+  transition: background-color 0.3s ease;
+}
+#btn-ln-one:active {
+  background-color: #238ed6;
+  transition: background-color 0.1 ease;
+}
+#btn-ln-two{
+  height: 6rem;
+  width: 12rem;
+  background-color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 20px;
+  color: #84572F;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  transition: background-color 0.3s ease;
+}
+#btn-ln-two:hover {
+  background-color: #B1C9EF;
+  transition: background-color 0.3s ease;
+}
+#btn-ln-two:active {
+  background-color: #238ed6;
+  transition: background-color 0.1 ease;
+}
+#submit-btn {
+  background-color: #F1A805;
+  height: 3.5rem;
+  width: 20rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-weight: bold;
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#submit-btn:active{
+    background-color: #d49100;
+    transition: background-color 0.1 ease;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal; 
+    font-style: normal;  
+}
+
+@font-face {
+    font-family: "Lalezar";
+    src: url("../assets/fonts/Lalezar/Lalezar-Regular.ttf") format("truetype");
+    font-weight: normal; 
+    font-style: normal;  
+}

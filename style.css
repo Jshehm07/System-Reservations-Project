@@ -1,0 +1,423 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background-color: #eed5c1;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.nav {
+    padding: 20px 20px;
+    max-height: 4rem;
+    background-color: #0e5e9f;
+}
+
+.nav-logo {
+    height: 1.5rem;
+    width: auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: inline;
+}
+
+.content-bg {
+    transform: rotate(180deg);
+    position: absolute;
+    width: 100vw;
+    height: 50rem;
+    left: 0%;
+    z-index: -1;
+    content: fill;
+}
+
+.content-img {
+    height: 20rem;
+    width: 30rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.content-img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#img-1 {
+    position: absolute;
+    top: 20%;
+    left: -5%;
+}
+
+#img-2 {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+}
+
+.content-s1 {
+    text-align: center;
+    position: relative;
+}
+
+#top-logo {
+    position: relative;
+    text-align: center;
+    height: 6rem;
+    margin-top: 30px;
+}
+
+.title {
+    font-family: Lalezar;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.greetings {
+    margin: 0;
+    font-weight: bold;
+}
+
+.book-btn {
+    border: none;
+    background-color: #f1a805;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    height: 3rem;
+    width: 9rem;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.book-btn:hover {
+    background-color: #dc9600;
+    transition: background-color 0.3s ease;
+}
+
+.section-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.feature {
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.feature > h2 {
+    font-family: lalezar;
+    font-size: 2rem;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.feature-desc {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.section-3 {
+    border: #84572f solid 0.7rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.section-3 h2 {
+    text-transform: uppercase;
+    font-family: lalezar;
+    margin: 2rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    box-sizing: border-box;
+}
+
+.swimwear {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.swimwear h3 {
+    text-transform: uppercase;
+    font-family: lalezar;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.attire {
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 0 2rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.attire h3 {
+    text-transform: uppercase;
+    font-family: lalezar;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.attire-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    width: auto;  
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;  
+    max-width: 80%;  
+}
+
+.attire-item {
+    text-align: center;
+}
+
+.attire img {
+    width: 100%;  
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+
+.attire p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#for-girls {
+    position: relative;
+    left: 10%;
+}
+
+.footer {
+    background-color: #0e5e9f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+    .nav {
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .content-bg {
+        top: 0%;
+        height: 30rem; 
+    }
+
+    .content-img {
+        width: 0; 
+        height: 0; 
+    }
+
+    .content-s1 {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 2rem; 
+    }
+
+    .greetings {
+        font-size: 1rem; 
+    }
+
+    .book-btn {
+        width: 100%; 
+        font-size: 1rem; 
+    }
+
+    .section-2 {
+        padding: 2rem 1rem; 
+    }
+
+    .feature {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        font-size: 0.875rem; 
+    }
+
+    .section-3 {
+        padding: 1rem; 
+        gap: 1.5rem; 
+    }
+
+    .swimwear > h2 {
+        font-size: clamp(1.25rem, 6vw, 2.5rem); 
+        padding: 0.5rem;
+    }
+
+    .attire {
+        height: auto;
+        padding: 1rem; 
+        margin: 0 1rem; 
+    }
+
+    .attire-images {
+        grid-template-columns: 1fr;
+    }
+
+    .attire img {
+        max-width: 100%;
+    }
+
+    #for-girls {
+    position: relative;
+    left: 0%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-link {
+        font-size: 1.3rem; 
+    }
+
+    .content-bg {
+        top: 0%;
+        height: 20rem;
+    }
+
+    .content-img {
+        width: 0; 
+        height: 0;
+    }
+
+    .content-s1 {
+        padding: 3rem;
+    }
+
+    .title {
+        font-size: 2.5rem; 
+    }
+
+    .greetings {
+        font-size: 1.25rem; 
+    }
+
+    .book-btn {
+        width: 100%; 
+        font-size: 1.1rem; 
+    }
+
+    .section-2 {
+        padding: 3rem 2rem;
+    }
+
+    .feature {
+        padding: 1.75rem;
+    }
+
+    .footer {
+        font-size: 1rem;
+    }
+
+    .section-3 {
+        padding: 2rem; 
+        gap: 1.75rem; 
+    }
+
+    .swimwear > h2 {
+        font-size: clamp(1.5rem, 5vw, 3rem); 
+        padding: 1rem;
+    }
+
+    .attire {
+        height: auto;
+        padding: 1.5rem; 
+        margin: 0 2rem; 
+    } 
+
+    .attire-images {
+        grid-template-columns: 1fr;
+    }
+
+    .attire img {
+        max-width: 100%;
+    }
+
+    #for-girls {
+    position: relative;
+    left: 0%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .section-3 {
+        padding: 3rem;
+        gap: 2rem; /
+    }
+
+    .swimwear > h2 {
+        font-size: clamp(2rem, 4vw, 3rem); 
+        padding: 1.5rem;
+    }
+
+    .attire {
+        padding: 2rem; 
+        margin: 0 3rem; 
+    }
+}
