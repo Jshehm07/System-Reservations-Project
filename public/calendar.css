@@ -48,7 +48,7 @@
   margin: 1rem 0;
   border: none;
 }
-#btn-ln-one{
+.btn-ln-one{
   height: 6rem;
   width: 12rem;
   background-color: #FFFFFF;
@@ -64,15 +64,15 @@
   margin-bottom: 3rem;
   transition: background-color 0.3s ease;
 }
-#btn-ln-one:hover {
+.btn-ln-one:hover {
   background-color: #B1C9EF;
   transition: background-color 0.3s ease;
 }
-#btn-ln-one:active {
+.btn-ln-one:active {
   background-color: #238ed6;
   transition: background-color 0.1 ease;
 }
-#btn-ln-two{
+.btn-ln-two{
   height: 6rem;
   width: 12rem;
   background-color: #FFFFFF;
@@ -86,11 +86,11 @@
   margin-right: 1.25rem;
   transition: background-color 0.3s ease;
 }
-#btn-ln-two:hover {
+.btn-ln-two:hover {
   background-color: #B1C9EF;
   transition: background-color 0.3s ease;
 }
-#btn-ln-two:active {
+.btn-ln-two:active {
   background-color: #238ed6;
   transition: background-color 0.1 ease;
 }
@@ -128,4 +128,10 @@
     src: url("../assets/fonts/Lalezar/Lalezar-Regular.ttf") format("truetype");
     font-weight: normal; 
     font-style: normal;  
+}
+.active {
+  background-color: #238ed6;
+  color: #ffff;
+  border: none;
+  outline: none;
 }

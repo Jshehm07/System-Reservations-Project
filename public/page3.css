@@ -1,0 +1,227 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Montserrat, Lalezar;
+}
+
+body {
+    margin: 0;
+    background-color: #eed5c1;
+}
+
+.header-bg {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-bottom: #85582f solid 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.header-logo {
+    position: absolute;
+    height: auto;
+    width: 11%;
+    top: 3.5%;
+    left: 3%;
+    z-index: 1;
+}
+
+.header-name {
+    position: absolute;
+    height: auto;
+    width: 22%;
+    top: -9%;
+    left: 12%;
+    z-index: 1;
+}
+
+.container {
+    margin-top: 3%;
+    padding: 0 1rem;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: black;
+    margin: 2rem;
+    font-family: lalezar;
+}
+
+.box-title {
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    margin: 1.5rem;
+}
+
+.assets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.item {
+    text-align: center;
+    flex: 1 1 100px;
+    max-width: 150px;
+    font-weight: bold;
+}
+
+.item img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.note {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+    margin-top: 2rem;
+}
+
+.reservation,
+.bring {
+    max-width: 800px;
+    border: solid 3px #d69f6d;
+    background-color: #93ada4;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    margin: 3rem auto;
+}
+
+.emailinput {
+    padding: 0 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+input {
+    font-family: Montserrat;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #d69f6d;
+}
+
+button {
+    font-family: Montserrat;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 10px 40px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #ffb300;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #eea700;
+}
+
+button:active {
+    background-color: #d69600;
+}
+
+
+.footer {
+    background-color: #0e5e9f;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+@media screen and (max-width: 1024px) {
+    .assets {
+        justify-content: center;
+    }
+
+    .item {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-logo {
+        width: 13%;
+        top: 2%;
+    }
+
+    .header-name {
+        width: 30%;
+        top: -6%;
+        left: 15%;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .box-title {
+        font-size: 1.25rem;
+    }
+
+    .item {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-logo {
+        width: 13%;
+        top: 1%;
+    }
+
+    .header-name {
+        width: 30%;
+        top: -3%;
+        left: 20%;
+    }
+
+    .container h1 {
+        font-size: 1.75rem;
+    }
+
+    .box-title {
+        font-size: 1rem;
+    }
+
+    .assets {
+        gap: 0.5rem;
+    }
+
+    .item {
+        flex: 1 1 100%;
+        max-width: 100px;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
