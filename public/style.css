@@ -398,6 +398,11 @@ header {
     .attire img {
         max-width: 100%;
     }
+
+    #for-girls {
+    position: relative;
+    left: 0%;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -414,10 +419,5 @@ header {
     .attire {
         padding: 2rem; 
         margin: 0 3rem; 
-    }
-    
-    #for-girls {
-    position: relative;
-    left: 0%;
     }
 }
