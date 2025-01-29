@@ -1,21 +1,41 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const weekButtons = document.querySelectorAll(".days");
-  weekButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      weekButtons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-    });
-  });
+const modalOne = document.getElementById("modal-one");
+const modalTwo = document.getElementById("modal-two");
+const buttonOne = document.getElementById("button-1");
+const buttonTwo = document.getElementById("button-2");
+const days = document.querySelectorAll(".day"); 
+const hours = document.querySelectorAll(".hour"); 
 
-  const hourButtons = document.querySelectorAll(".hours button");
-  hourButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      hourButtons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-    });
-  });
+function selectDate(date) {
+  window.parent.postMessage({ type: "dateSelected", date: date }, "*");
+}
 
-  document.getElementById("submit-btn").addEventListener("click", function () {
-    window.close();
+modalOne.classList.add("show");
+
+buttonOne.addEventListener("click", () => {
+  modalOne.classList.remove("show");
+  modalTwo.classList.add("show");
+});
+
+buttonTwo.addEventListener("click", () => {
+  modalTwo.classList.remove("show");
+});
+
+modalTwo.addEventListener("click", (event) => {
+  if (event.target === modalTwo) {
+    modalTwo.classList.remove("show");
+  }
+});
+
+days.forEach((day) => {
+  day.addEventListener("click", () => {
+    days.forEach((d) => d.classList.remove("active"));
+    day.classList.add("active");
+  });
+});
+
+hours.forEach((hour) => {
+  hour.addEventListener("click", () => {
+    hours.forEach((d) => d.classList.remove("active"));
+    hour.classList.add("active");
   });
 });

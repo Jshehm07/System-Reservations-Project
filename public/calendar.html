@@ -2,45 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./calendar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Splashpoint Calendar</title>
+    <link rel="stylesheet" href="./calendar.css">
+    <title>Document</title>
 </head>
+<body>
+     <div class="modal-one" id="modal-one">
+        <div class="calendar-1" id="calendar-container">
+            <h2 class="title-1">Pick your day</h2>
+            
+            <hr>
 
-<body>    
-    <div class="calendar">
-        <div class="week">
-            <h1 id="title">PICK YOUR DATE AND TIME FOR RESERVATION</h1>
-            <button class="days">SUN</button>
-            <button class="days">MON</button>
-            <button class="days">TUE</button>
-            <button class="days">WED</button>
-            <button class="days">THU</button>
-            <button class="days">FRI</button>
-            <button class="days">SAT</button>
-            <hr class="calendar-line">
-        </div>
-        <div class="hours">
-            <div class="hour-one">
-                <button class="btn-ln-one">10 - 11<br>AM</button>
-                <button class="btn-ln-one">12 - 1<br>PM</button>
-                <button class="btn-ln-one">2 - 3<br>PM</button>
-                <button class="btn-ln-one">4 - 5<br>PM</button>
+            <div class="week">
+                <button class="day">SUN</button>
+                <button class="day">MON</button>
+                <button class="day">TUE</button>
+                <button class="day">WED</button>
+                <button class="day">THU</button>
+                <button class="day">FRI</button>
+                <button class="day">SAT</button>
             </div>
-            <div class="hour-two">
-                <button class="btn-ln-two">11 - 12<br>NN</button>
-                <button class="btn-ln-two">1 - 2<br>PM</button>
-                <button class="btn-ln-two">3 - 4<br>PM</button>
-                <button class="btn-ln-two">5 - 6<br>PM</button>
-            </div>
+
+            <button class="button-1" id="button-1">Submit</button>
         </div>
+     </div>
 
-        <button id="submit-btn">Submit</button>
-    </div>
+     <div class="modal-two" id="modal-two">
+        <div class="calendar-2">
+            <h2 class="title-2">Pick your time</h2>
+            
+            <hr>
 
-    <script src="./calendar.js"></script>
+            <div class="hours">
+                <button class="hour">10 - 12<br>NN</button>
+                <button class="hour">12 - 2<br>PM</button>
+                <button class="hour">2 - 4<br>PM</button>
+                <button class="hour">4 - 6<br>PM</button>
+                <button class="hour">6 - 8<br>PM</button>
+            </div>
+
+            <button class="button-2" id="button-2">Submit</button>
+        </div>
+     </div>
+
+     <script src="./calendar.js"></script>
 </body>
 </html>
