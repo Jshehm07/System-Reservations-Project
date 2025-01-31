@@ -189,15 +189,13 @@
                     Get in touch and enjoy all of your swims!
                 </p>
             </div>
+            <div class="about-image">
+                <img src="./assets/images/logo/busineessName.png" alt="About Us Image">
+            </div>
         </div>
-        <div class="about-image">
-            <img src="./assets/images/logo/busineessName.png" alt="About Us Image">
-        </div>  
-    </div>
         <div class="waves">
             <img src="./assets/images/Page 1/waves3.png" alt="">
         </div>
-    </div>
     </section>
 
     <footer class="footer">

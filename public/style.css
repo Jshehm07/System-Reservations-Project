@@ -100,7 +100,7 @@ header {
 
 .book-btn {
     border: none;
-    background-color: #f1a805;
+    background-color: #eda200;
     color: white;
     font-weight: bold;
     font-size: 1.25rem;
@@ -115,8 +115,15 @@ header {
 
 .book-btn:hover {
     background-color: #dc9600;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
+.book-btn:active {
+    background-color: #d29000;
+    transition: background-color 0.3s ease;
+}
+
 
 .section-2 {
     display: grid;
@@ -491,6 +498,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    flex-direction: row;
     justify-content: center;
     max-width: 1200px;
     margin: auto;

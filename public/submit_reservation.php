@@ -17,8 +17,8 @@ $guest_type = $_POST['guest_type'];
 $date = $_POST['date_time'];
 $time = $_POST['time'];
 
-$guest_types = ["1" => "Students", "2" => "Adults", "3" => "Children"];
-$guest = isset($guest_types[$guest_type]) ? $guest_types[$guest_type] : "Unknown";
+$valid_guest_types = ["Students", "Adults", "Children"];
+$guest = in_array($guest_type, $valid_guest_types) ? $guest_type : "Unknown";
 
 if ($number_of_people > 10) {
     die("Error: Maximum of 10 people allowed.");
@@ -33,8 +33,10 @@ if ($guest === "Students") {
 $sql = "INSERT INTO reservations (full_name, contact_num, number_of_people, guest, date, time, price) 
         VALUES ('$full_name', '$contact_num', '$number_of_people', '$guest', '$date', '$time', '$total_price')";
 
+session_start();
 if ($conn->query($sql) === TRUE) {
-    header("Location: ./page3.php"); 
+    $_SESSION['reservation_id'] = $conn->insert_id;
+    header("Location: ./page3.php");
     exit();
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

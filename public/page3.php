@@ -1,3 +1,33 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['reservation_id'])) {
+        die("No reservation found.");
+    }
+
+    $reservation_id = $_SESSION['reservation_id'];
+
+    $host = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "splashpoint_db";
+
+    $conn = new mysqli($host, $username, $password, $database);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT full_name, contact_num, number_of_people, guest, date, time, price FROM reservations WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $reservation_id);
+    $stmt->execute();
+    $stmt->bind_result($full_name, $contact_num, $number_of_people, $guest, $date, $time, $price);
+    $stmt->fetch();
+    $stmt->close();
+    $conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,13 +53,13 @@
     <div class="reservation">
         <h2 class="box-title">Reservation Details</h2>
         <div class="reservation-details">
-            <p><strong>Full Name:</strong> placeholder</p>
-            <p><strong>Contact Number:</strong> placeholder</p>
-            <p><strong>Number of Participants:</strong> placeholder</p>
-            <p><strong>Guest:</strong> placeholder</p>
-            <p><strong>Date:</strong> placeholder</p>
-            <p><strong>Time:</strong> placeholder</p>                                                                                  
-            <p><strong>Price:</strong> placeholder</p>
+            <p><strong>Full Name:</strong> <?= $full_name; ?></p>
+            <p><strong>Contact Number:</strong> <?= $contact_num; ?></p>
+            <p><strong>Number of Participants:</strong> <?= $number_of_people; ?></p>
+            <p><strong>Guest:</strong> <?= $guest; ?></p>
+            <p><strong>Date:</strong> <?= $date; ?></p>
+            <p><strong>Time:</strong> <?= $time;?></p>
+            <p><strong>Price:</strong> <?=  number_format($price, 2); ?></p>
         </div>
     </div>
     
@@ -66,27 +96,20 @@
         <p class="note">
             Forgot something? No worries! Rental items are available at the pool for a minimal fee.
         </p>
+        
     </div>
-</div>
-
         <div class="emailinput">
-            <h3>Enter email to confirm reservation</h3>
-            <input placeholder="Email" type="email" id="email" name="email">
-            <p id="error-message">*Email is required to proceed</p>
-            <br>
-            <button id="confirm">Confirm</button>
+            <h3>Are all your information correct?</h3>
+            <button type="submit" id="confirm">Confirm</button>
         </div>
 
-        <div class="modal" id="modal">
+    <div class="modal" id="modal">
         <div class="confirmation">
-            <h1>
-                An email has been sent to you with all your details
-                please present the email when entering our premises
-            </h1>
-
+            <h1>An SMS has been sent to you with all your details. Please present the SMS when entering our premises.</h1>
             <button class="close" id="close">Close</button>
         </div>
     </div>
+
 
         <footer class="footer">
             <p>© 2025 Splashpoint. All rights reserved.</p>
