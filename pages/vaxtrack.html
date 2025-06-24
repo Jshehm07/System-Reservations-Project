@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HealthyCainta.Com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/Cainta-Rizal-Logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="./vaxD.css" />
+
+    <!-- ====== Font Links ====== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- ====== Boxicons Link ====== -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ====== Header and Footer Link ====== -->
+    <link rel="stylesheet" href="../top-foot.css">
+    <script src="../logged-in.js" defer></script>
+    <script src="../top-foot.js"></script>
+  </head>
+
+  <body>
+   <header>
+      <div class="topbar">
+          <img src="../images/Cainta-Rizal-Logo.png" alt="">
+          <h2>HEALTHY SA CAINTA RIZAL</h2>
+      </div>
+      <div class="navbar"> 
+          <i class='bx bx-menu' id="menu-btn"></i>
+          <a href="../index.html" class="hideOnMobile">HOME</a>
+          <a href="../pages/newsfeed.html" class="hideOnMobile">NEWS</a>
+          <a href="../pages/hotline.html" class="hideOnMobile">HOTLINES</a>
+          <a href="../pages/FAQs.html" class="hideOnMobile">FAQs</a>
+          <a href="../pages/login.html" class="log hideOnLog">LOG IN</a>
+          <a href="#" class="log showOnLog">LOG OUT</a>
+      </div>
+      <div class="sidebar" id="sidebar">
+          <a href="../index.html" class="hideOnPC">HOME</a>
+          <a href="../pages/newsfeed.html" class="hideOnPC">NEWS</a>
+          <a href="../pages/hotline.html" class="hideOnPC">HOTLINES</a>
+          <a href="../pages/FAQs.html" class="hideOnPC">FAQs</a>
+          <a href="../pages/Scheduler.html">SCHEDULE AN APPOINTMENT</a>
+          <a href="../pages/registration.html">PATIENT REGISTRATION</a>
+          <a href="../pages/vaxtrack.html" class="active">VACCINE TRACKER</a>
+          <a href="../pages/DLForms.html">FORMS</a>
+          <a href="../pages/tips.html">HEALTIPS</a>
+          <a href="../myaccount.html" class="showOnLog">ACCOUNT</a>
+      </div>
+  </header>
+
+    <h1>Track your Vaccine Records</h1>
+
+    <div class="container">
+      <h2>Register Vaccine Record</h2>
+
+      <form id="Vax-form">
+        <div class="PersonalInfo">
+          <p class="PinfoParagraph">Personal Information</p>
+
+          <label class="label" for="fname">First Name</label>
+          <input class="input" type="text" id="fname" name="fname" placeholder="Juan" required/>
+
+          <br/>
+
+          <label class="label-lname" for="lname">Last Name</label>
+          <input class="input" type="text" id="lname" name="lname" placeholder="Dela Cruz" required/>
+
+          <br/>
+
+          <label class="label" for="age">Age</label>
+          <input class="input" type="number" min="0" max="150" id="age" name="age" value="" required/>
+
+        </div>
+
+        <br/>
+
+        <div class="VaccineForm">
+          <p class="VinfoParagraph">Vaccine Information</p>
+
+          <br/>
+
+          <label class="label" for="nameV">Name of Vaccine:</label>
+          <select class="input" id="nameV" name="nameV" required>
+            <option value="">-- Select Vaccine --</option>
+            <option value="Pfizer">Pfizer</option>
+            <option value="Moderna">Moderna</option>
+            <option value="AstraZeneca">AstraZeneca</option>
+            <option value="Johnson & Johnson">Johnson & Johnson</option>
+            <option value="Sinovac">Sinovac</option>
+            <option value="Sputnik V">Sputnik V</option>
+          </select>
+
+          <br/>
+
+          <label class="labelbox">
+            <input type="checkbox" id="firstD" name="firstD" />
+            <span>1st Dose</span>
+          </label>
+
+          <br/>
+          <br/>
+          
+          <label class="label" for="dateV1">Date of Vaccination:</label>
+          <input class="input" type="date" id="dateV1" name="dateV1" required/>
+
+          <br/>
+
+          <label class="labelbox">
+            <input type="checkbox" id="secondD" name="secondD" />
+            <span>2nd Dose</span>
+          </label>
+
+
+          <br/>
+          <br/>
+
+          <label class="label" for="dateV2">Date of Vaccination:</label>
+          <input class="input" type="date" id="dateV2" name="dateV2" required/>
+        </div>
+
+        <br/>
+
+        <div class="buttonSubContainer">
+          <button class="buttonSub" type="submit">REGISTER</button>
+          <button class="buttonDown" id="downloadBtn" type="button">DOWNLOAD</button>
+        </div>
+
+        <br/>
+      </form>
+    </div>
+    
+    <div class="span"></div>
+
+   <footer>
+        <p>© ALL RIGHTS RESERVED TO HEALTHYCAINTA.PH</p>
+    </footer>
+
+    <script src="./vaccine.js"></script>
+  </body>
+</html>
+
+<!--    Vaccination Tracker: Cuevas
+
+<a href="dashboard html here" target="_self"><button id="main">Select</button></a>
+
+colors:
+
+004080 Main Accent
+e6f0fa 
+f2f2f2
+333
+
+(FORM)
+
+Register Vaccine record
+
+INPUTS
+
+Name: (FIELD)
+Age:  (FIELD)
+
+1st Dose: (checkbox) (options show below when checked)
+Name of Vaccine: 
+Date of vaccination: (DATE INPUT)
+
+2nd Dose: (checkbox) (options show below when checked)
+Name of Vaccine: 
+Date of vaccination: (DATE INPUT)
+
+
+Look up Vaccine record via Table (table) (filter options)
+Includes Fields from Registration of Record
+
+
+Return to Dashboard (button)
+
+-->
