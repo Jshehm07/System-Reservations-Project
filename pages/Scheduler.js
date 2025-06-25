@@ -143,9 +143,17 @@ function updateProfileName() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  const name = localStorage.getItem("userName");
-  const nameElement = document.getElementById("userDisplayName");
-  if (name && nameElement) {
-    nameElement.textContent = name;
-  }
+  setTimeout(() => {
+    const userName = localStorage.getItem("userName");
+    const nameDisplay = document.getElementById("userDisplayName");
+
+    console.log("Overwriting Name Here with:", userName);
+    
+    if (nameDisplay && userName) {
+      nameDisplay.textContent = userName;
+      nameDisplay.style.display = "block";
+      nameDisplay.style.visibility = "visible";
+      nameDisplay.style.color = "#000";
+    }
+  }, 100); 
 });
